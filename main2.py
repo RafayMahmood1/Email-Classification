@@ -11,9 +11,9 @@ import tensorflow as tf
 sales_model = Flask(__name__)
 
 
-sales_vs_generic = tf.keras.models.load_model(r"C:\Users\Rafay\Downloads\sales_vs_nonsales2\sales_vs_nonsales2\99_accuracy_lstm.h5")
+sales_vs_generic = tf.keras.models.load_model("99_accuracy_lstm.h5")
 
-with open(r'C:\Users\Rafay\Downloads\sales_vs_nonsales2\sales_vs_nonsales2\tokenizer.pickle', 'rb') as handle:
+with open('tokenizer.pickle', 'rb') as handle:
     tokenizer1 = pickle.load(handle)
 
 def clean(text):
